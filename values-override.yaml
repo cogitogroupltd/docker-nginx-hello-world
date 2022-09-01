@@ -8,7 +8,7 @@ image:
   pullPolicy: "Always"
   
 imagePullSecrets:
-- regcred
+- name: regcred
 
 services:
  - name: http
