@@ -1,4 +1,4 @@
-# See ../../charts/common/values.yaml for full list of features
+# See https://github.com/cogitogroupltd/helm-chart-boilerplate/blob/main/charts/common/values.yaml for full list of features
 
 replicaCount: 1
 
@@ -6,6 +6,9 @@ image:
   repository: 009453609091.dkr.ecr.eu-west-1.amazonaws.com/test
   tag: "latest"
   pullPolicy: "Always"
+  
+imagePullSecrets:
+- regcred
 
 services:
  - name: http
