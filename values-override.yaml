@@ -1,0 +1,15 @@
+# See ../../charts/common/values.yaml for full list of features
+
+replicaCount: 1
+
+image: 
+  repository: 009453609091.dkr.ecr.eu-west-1.amazonaws.com/test
+  tag: "latest"
+  pullPolicy: "Always"
+
+services:
+ - name: http
+   type: ClusterIP
+   containerPort: 80
+   targetPort: 80
+   protocol: TCP
